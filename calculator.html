@@ -1,0 +1,71 @@
+  <!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Калькулятор</title>
+	<link rel="stylesheet" href="style.css" />
+	<script src="jquery.js"></script>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <header>
+	  <a href="index.html"><img src="web_logo.png" height="100" alt="Website Logo"></a>
+      <h1>Основы Web-технологий</h1>
+	  <nav>
+	    <ul class="nav_menu">
+		  <li><a href="index.html">Главная</a></li>
+		  <li><a href="web_tech.html">Web-технологии</a>
+		    <ul>
+			  <li><a href="html5.html">HTML5</a></li>
+			  <li><a href="css3.html">CSS3</a></li>
+			  <li><a href="javascript.html">JavaScript</a></li>
+		    </ul>
+		  </li>
+		  <li><a href="calculator.html">Калькулятор</a></li>
+		  <li><a href="test.html">Тест</a></li>
+		</ul>
+	  </nav>
+	</header>
+	<main>
+	 <form name="calc" action="">
+	  <table>
+		  <tr>
+			<td colspan="5" class="line"><input type="text" id="displ" name="ReadOut" value="0" readonly="readonly" /></td>
+		  </tr>
+		    <tr>
+			<td><button type="button" value="7" onclick="NumPressed(7)" class="num" >7</button></td>
+			<td><button type="button" value="7" onclick="NumPressed(8)" class="num" >8</button></td>
+			<td><button type="button" value="7" onclick="NumPressed(9)" class="num" >9</button></td>
+			<td><button type="button" class="action" value="/" onclick="Operation('/')">/</button></td>
+			<td><button type="button" value="C" onclick="Clear()">C</button></td>
+		  </tr>
+		  <tr>
+			<td><button type="button" value="4" onclick="NumPressed(4)" class="num">4</button></td>
+			<td><button type="button" value="5" onclick="NumPressed(5)" class="num">5</button></td>
+			<td><button type="button" value="6" onclick="NumPressed(6)" class="num">6</button></td>
+			<td><button type="button" id="multiply" class="action" value="*" onclick="Operation('*')">*</button></td>
+			<td><button type="button" id="plusmn" value="-+" onclick="Neg()">&plusmn;</button></td>
+		  </tr>
+		    <tr>
+			<td><button type="button" value="1" onclick="NumPressed(1)" class="num">1</button></td>
+			<td><button type="button" value="2" onclick="NumPressed(2)" class="num">2</button></td>
+			<td><button type="button" value="3" onclick="NumPressed(3)" class="num">3</button></td>
+			<td><button type="button" id="minus" class="action" value="-" onclick="Operation('-')">-</button></td>
+			<td rowspan="2" id="res"><button type="button" id="result" class="r" value="=" onclick="Operation('=')" >=</button></td>
+	      </tr>
+		    <tr>
+			<td colspan="2"><button type="button" value="0" onclick="NumPressed(0)" class="num">0</button></td>
+			<td><button type="button" id="point" value="." onclick="Decimal()" >.</button></td>
+			<td><button type="button" id="plus" class="action" value="+" onclick="Operation('+')">+</button></td>
+		  </tr>
+		</table>
+       </form>		
+	  </main>	   
+	<footer>
+      <address>
+        <a href="http/:www.mail@mail">Пишите: mail@mail</a>
+      </address>
+	  <div>© Фамилия И.О., год</div>
+	</footer>
+	<script src="script.js"></script>
+  </body>
+</html>
